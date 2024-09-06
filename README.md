@@ -19,7 +19,8 @@ You can install askGemini with [lazy.nvim](https://github.com/folke/lazy.nvim):
 
 ```lua
 {
-
+    'agusnt/askGemini.nvim',
+    dependencies = { 'MunifTanjim/nui.nvim' }
 }
 ```
 
@@ -43,23 +44,21 @@ command to save yourself the extra time of writing the prompt. Just add the
 following when configuring the plugin: 
 
 ```lua
-config = function ()
-    require('askGemini').setup({
-          user_questions = {
-              {
-                  -- The command AskGeminiGrammar will check grammar and spelling 
-                  cmd = 'Grammar',
-                  prompt = 'Check grammar and spelling'
-              },
-              {
-                  -- The command AskGeminiGrammar will explain the selected ExplainCode
-                  -- to you
-                  cmd = 'ExplainCode',
-                  prompt = 'What this code does?'
-              }
+require('askGemini').setup({
+      user_questions = {
+          {
+              -- The command AskGeminiGrammar will check grammar and spelling 
+              cmd = 'Grammar',
+              prompt = 'Check grammar and spelling'
+          },
+          {
+              -- The command AskGeminiGrammar will explain the selected ExplainCode
+              -- to you
+              cmd = 'ExplainCode',
+              prompt = 'What this code does?'
           }
-    })
-end
+      }
+})
 ```
 
 The `cmd` field is the name of the command (with `AskGemini` prepended; 
