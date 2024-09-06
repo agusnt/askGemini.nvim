@@ -105,7 +105,7 @@ local function interactive_prompt(args)
         },
     }, {
         on_submit = function(value)
-            if args ~= '' then
+            if args['name'] == nil then
                 value = value .. ': ' .. args
             end
             lets_ask(value)
