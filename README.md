@@ -5,6 +5,9 @@ A plugin to ask questions to Google's gemini from Neovim.
 The purpose of this plugin is having an interface to communicate with Gemini API,
 this way you don't have to move to your browers.
 
+|-|-|
+|![Input](./img/Input.png)|![Answer](./img/Answer.png)|
+
 ## Installation
 
 ### Pre-requisites
