@@ -1,7 +1,7 @@
 -- Title: askGimini
 -- Description: A plugin to ask questions to Google's Gemini
--- Last change: 1-April-2025 -- Using current date as requested
--- Manteiner: Navarro-Torres, Agustin (https://github.com/agusnt)
+-- Last change: 06-July-2025
+-- Maintainer: Navarro-Torres, Agustin (https://github.com/agusnt)
 
 -- Use local variables for better scoping
 local Popup = require("nui.popup")
@@ -57,6 +57,9 @@ local function set_popup_lines(popup_buffer, text_content)
         vim.notify("Popup buffer is invalid.", vim.log.levels.ERROR)
         return
     end
+
+    -- Set buffer to be modifiable in order to clear it
+    vim.api.nvim_buf_set_option(popup_buffer, 'modifiable', true)
 
     -- Clear existing content
     vim.api.nvim_buf_set_lines(popup_buffer, 0, -1, false, {})
