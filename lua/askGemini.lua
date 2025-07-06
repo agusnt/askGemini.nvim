@@ -58,6 +58,9 @@ local function set_popup_lines(popup_buffer, text_content)
         return
     end
 
+    -- Set buffer to be modifiable in order to clear it
+    vim.api.nvim_buf_set_option(popup_buffer, 'modifiable', true)
+
     -- Clear existing content
     vim.api.nvim_buf_set_lines(popup_buffer, 0, -1, false, {})
 
