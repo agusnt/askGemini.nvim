@@ -1,7 +1,7 @@
 -- Title: askGimini
 -- Description: A plugin to ask questions to Google's Gemini
--- Last change: 1-April-2025 -- Using current date as requested
--- Manteiner: Navarro-Torres, Agustin (https://github.com/agusnt)
+-- Last change: 06-July-2025
+-- Maintainer: Navarro-Torres, Agustin (https://github.com/agusnt)
 
 -- Use local variables for better scoping
 local Popup = require("nui.popup")
