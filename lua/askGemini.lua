@@ -305,7 +305,7 @@ function askGemini.setup(opts)
                     command_handler,
                     {
                         range = true, -- Command works on a range (visual selection)
-                        nargs = '0',  -- Command takes no arguments itself
+                        nargs = 0,  -- Command takes no arguments itself
                         desc = "Ask Gemini: " .. prompt_text -- Description for command listings
                     }
                 )
@@ -320,7 +320,7 @@ function askGemini.setup(opts)
         'AskGemini',
         interactive_prompt, -- Directly call the interactive prompt function
         {
-            nargs = '0', -- Takes no arguments
+            nargs = 0, -- Takes no arguments
             desc = "Ask Gemini interactively"
         }
     )
@@ -334,7 +334,7 @@ function askGemini.setup(opts)
         end,
         {
             range = true,
-            nargs = '0',
+            nargs = 0,
             desc = "Ask Gemini about selection (" .. default_prompt .. ")" -- Dynamic description
         }
     )
